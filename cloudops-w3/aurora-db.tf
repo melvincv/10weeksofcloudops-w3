@@ -19,7 +19,7 @@ resource "aws_rds_cluster" "cloudops-w3-db" {
   master_password           = "Lh6KgnYHnGV34defo4G2mJjvtnCuJB"
   backup_retention_period   = 5
   preferred_backup_window   = "02:00-03:00"
-  skip_final_snapshot       = false
+  skip_final_snapshot       = true
   final_snapshot_identifier = "cloudops-w3-db-final"
   vpc_security_group_ids    = [aws_security_group.cloudops-w3-db-sg.id]
   apply_immediately = true
