@@ -12,6 +12,11 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+
   owners = ["099720109477"] # Canonical
 }
 
@@ -25,7 +30,7 @@ resource "aws_instance" "cloudops-w3-web1" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t3.micro"
   subnet_id              = module.vpc.public_subnet_az1_id
-  vpc_security_group_ids = ["aws_security_group.cloudops-w3-web-sg.id"]
+  vpc_security_group_ids = [aws_security_group.cloudops-w3-web-sg.id]
   key_name               = aws_key_pair.cloudops_w3_key.key_name
 
   tags = {
@@ -38,7 +43,7 @@ resource "aws_instance" "cloudops-w3-web2" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t3.micro"
   subnet_id              = module.vpc.public_subnet_az2_id
-  vpc_security_group_ids = ["aws_security_group.cloudops-w3-web-sg.id"]
+  vpc_security_group_ids = [aws_security_group.cloudops-w3-web-sg.id]
   key_name               = aws_key_pair.cloudops_w3_key.key_name
 
   tags = {
