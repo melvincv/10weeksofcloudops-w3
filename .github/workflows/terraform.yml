@@ -37,7 +37,7 @@ jobs:
         with:
           terraform_version: 1.5.5
 
-      # Runs a set of commands using the runners shell
+      # Initialize Terraform Providers
       - name: Initialize
         run: |
           cd cloudops-w3

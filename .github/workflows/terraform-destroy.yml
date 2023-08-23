@@ -33,7 +33,14 @@ jobs:
         with:
           terraform_version: 1.5.5
 
-      # Runs a set of commands using the runners shell
+      # Initialize Terraform Providers
+      - name: Initialize
+        run: |
+          cd cloudops-w3
+          terraform init
+
+
+      # Destroy all resources in AWS Cloud
       - name: Destroy all resources
         run: |
           cd cloudops-w3
