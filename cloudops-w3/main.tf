@@ -5,7 +5,7 @@ terraform {
     key            = "cloudops-w3/terraform.tfstate"
     region         = "us-east-1"
     # dynamodb_table = "cloudops-w3-terraform-state-lock"
-    profile        = "terraform-user-desktop"
+    # profile        = "terraform-user-desktop"
   }
   required_providers {
     aws = {
@@ -19,7 +19,7 @@ terraform {
 provider "aws" {
   # Configuration options
   region  = var.region
-  profile = "terraform-user-desktop"
+  # profile = "terraform-user-desktop"
 }
 
 # Call the local VPC module
