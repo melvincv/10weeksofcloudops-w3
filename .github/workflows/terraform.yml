@@ -33,7 +33,8 @@ jobs:
       # cd into the terraform code folder
       - name: cd into the terraform code folder
         run: |
-          cd ../../cloudops-w3
+          ls -l
+          cd cloudops-w3
           ls -l
 
       # Runs a set of commands using the runners shell
