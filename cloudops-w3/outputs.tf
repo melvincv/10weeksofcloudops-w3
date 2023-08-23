@@ -2,10 +2,6 @@ output "aurora_db_ep" {
   value = aws_rds_cluster.cloudops-w3-db.endpoint
 }
 
-output "aurora_db_cluster_members" {
-  value = aws_rds_cluster.cloudops-w3-db.cluster_members
-}
-
 output "aurora_db_cluster_id" {
   value = aws_rds_cluster.cloudops-w3-db.id
 }
