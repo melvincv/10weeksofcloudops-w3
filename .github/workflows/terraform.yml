@@ -30,22 +30,21 @@ jobs:
         with:
           terraform_version: 1.5.5
 
-      # cd into the terraform code folder
-      - name: cd into the terraform code folder
-        run: |
-          ls -l
-          cd cloudops-w3
-          ls -l
-
       # Runs a set of commands using the runners shell
       - name: Initialize
-        run: terraform init
+        run: |
+          cd cloudops-w3
+          terraform init
 
       # Validates syntax
       - name: Validate
-        run: terraform validate
+        run: |
+          cd cloudops-w3
+          terraform validate
 
       # Creates resources in AWS Cloud
       - name: Apply to AWS
-        run: terraform apply --auto-approve
+        run: |
+          cd cloudops-w3
+          terraform apply --auto-approve
           
