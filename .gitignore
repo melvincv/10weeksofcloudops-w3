@@ -1,7 +1,5 @@
 # Local .terraform directories
-**/.terraform/*
-cloudops-w3/.terraform/
-cloudops-w3/.terraform.lock.hcl
+**/.terraform*
 
 # .tfstate files
 *.tfstate
