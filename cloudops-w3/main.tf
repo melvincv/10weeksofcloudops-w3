@@ -4,7 +4,7 @@ terraform {
     bucket         = "melvincv2023-terraform-state"
     key            = "cloudops-w3/terraform.tfstate"
     region         = "us-east-1"
-    # dynamodb_table = "cloudops-w3-terraform-state-lock"
+    dynamodb_table = "cloudops-w3-terraform-state-lock"
     # profile        = "terraform-user-desktop"
   }
   required_providers {
