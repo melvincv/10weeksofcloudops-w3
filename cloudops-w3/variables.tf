@@ -34,11 +34,11 @@ variable "private_data_subnet_az2_cidr" {
     type = string
     description =  "Private DB Subnet in AZ 2"
 }
-variable "master_user" {
+variable "MASTER_USER" {
   type = string
   description = "Aurora DB Master User"
 }
-variable "master_pass" {
+variable "MASTER_PASS" {
   type = string
   description = "Aurora DB Master Password"
 }
