@@ -15,8 +15,8 @@ resource "aws_rds_cluster" "cloudops-w3-db" {
   engine_version            = "5.7.mysql_aurora.2.11.2"
   db_subnet_group_name      = aws_db_subnet_group.cloudops-w3-subg.id
   database_name             = "mywebappdb"
-  master_username           = "melvincv"
-  master_password           = "Lh6KgnYHnGV34defo4G2mJjvtnCuJB"
+  master_username           = var.master_user
+  master_password           = var.master_pass
   backup_retention_period   = 5
   preferred_backup_window   = "02:00-03:00"
   skip_final_snapshot       = true
