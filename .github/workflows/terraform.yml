@@ -51,6 +51,8 @@ jobs:
 
       # Creates resources in AWS Cloud
       - name: Apply to AWS
+        env:
+          TF_VAR_MASTER_PASS: ${{ secrets.TF_VAR_MASTER_PASS }}
         run: |
           cd cloudops-w3
           terraform apply --auto-approve
